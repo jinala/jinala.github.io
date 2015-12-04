@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Jeevana Priya Inala</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57602745-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+
+  <body>
+  <div id="container">
+    <div id="nav" >
+      <div class='name'>Jeevana Priya Inala</div>
+      <div class='email'>Email: jinala@mit.edu</div>
+      <!-- <a href='#about'>About me</a>
+      <a href="assets/resume.pdf">Resume</a>
+      <a href='#projects'>Projects</a>
+      <a href='#publications'>P[ublications</a>
+      <a href='#contact'>Contact</a> -->
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id='about'>
+      <div class='content'>
+        <!-- <img class='circular' src='assets/headshots/jeevana2.JPG' align="right"> -->
+        I am currently a Bachelors of Science (SB) student in Electrical Engineering and Computer Science (Course 6-2) at <a href="http://web.mit.edu/">MIT</a>. I am expecting to graduate along with Masters of Engineering (MEng) in June 2016.
+        <br>
+        <br>
+        I am in the process of applying to PhD programs this Fall. My current research interests are broadly in Programming Languages -- in particular, Program Synthesis and Program Analysis.
+        <br>
+        <br>
+        You can find my resume <a href="assets/resume.pdf">here</a>.
+      </div>
+    </div>
+
+
+<div id='publications'>
+    <div class='heading'>Publications</div>
+    <div class='content'>
+        <ul>
+            <li><b>Type Assisted Synthesis of Recursive Transformers on Algebraic Data Types</b>, <u>Jeevana Priya Inala</u>, Xiaokang Qiu, Ben Lerner, and Armando Solar-Lezama. <i>In Submission (Nov 2015).</i> [<a href="http://arxiv.org/abs/1507.05527" target="blank">arXiv</a>]</li>
+            <li><b>Type-Aware Transactions for Faster Concurrent Code</b>, Nathaniel Herman,  <u>Jeevana Priya Inala</u>, Yihe Huang, Lily Tsai, Eddie Kohler, Barbara Liskov, and Liuba Shrira . <i>In Submission (Oct 2015).</i> <!--[<a href="assets/papers/sto.pdf">draft</a>] --></li>
+        </ul>
+    </div>
+</div>
+
+    <div id='projects'>
+      <div class='heading'>Projects</div>
+      <div class='content'>
+        <b>SyntRec</b>  - Won first prize in PLDI SRC 2015 in Undergrad category (<a href="assets/papers/pldi_src_poster.pdf">Poster</a>) (<a href="assets/papers/pldi_slides.pdf">Slides</a>)
+        <br>
+        <br>
+        We implemented a system called SyntRec that helps implement interesting functions involving pattern matching and algebraic data types. One of the novel aspects of this work is the combination of type inference and counterexample-guided inductive synthesis (CEGIS) in order to support very high-level notations for describing a space of possible implementations. We also come up with a new encoding for synthesis problems involving immutable data-structures that significantly improves the scalability. The approach is evaluated on a set of case studies which most notably include synthesizing desugaring functions for lambda calculus that force the synthesizer to discover Church encodings for pairs and boolean operations, as well as a procedure to generate constraints for type inference.
+        <br>
+        <br>
+        <b>STO</b>
+        <br>
+        <br>
+        STO is a software transactional memory (STM) based not on low-level reads and writes on memory, but on datatypes-arrays, lists, queues, hash tables, and so forth-that explicitly support transactional op- erations. In a conventional, untyped STM, transaction bookkeeping uses read and write sets of memory words, and even simple requests can generate many more transactional memory accesses than the minimum necessary to ensure correctness. Our insight is that concurrent data structures can generate fewer superfluous accesses, and use more efficient concurrency protocols, when transaction bookkeeping tracks high-level operations like "insert node into tree".
+        <br>
+        <br>
+        <b>Synthesis of optimal and efficient constraints for SAT solving</b>
+        <br>
+        <br>
+        In this project, we are using Sketch (a program synthesis tool) to automatically figure out optimal CNF clauses from high level DAGs represented as functions. For this, we formalized this synthesis problem and developed optimal specifications for these kinds of problems. We have used it to synthesize constraints for several boolean functions. We are now working on using this formulation for more complex functions involving bit vectors and integrating these optimal encodings directly into Sketch.
+        <br>
+        <br>
+        <b>Concolic Execution for Django Applications</b> (<a href="assets/papers/6.858.pdf">Writeup</a>) (<a href="https://github.com/jonhoo/django-zoobar">Code1</a>) (<a href="https://github.com/jonhoo/django-coex">Code2</a>)
+        <br>
+        <br>
+        This is a 6.858 (Computer systems security) final project.
+        <br>
+        Concolic execution systems allow developers to verify that invariants in their applications are not violated no matter what input is given by a user. The idea is to use Z3 solver to find inputs that would trigger inconsistencies in web application. Unfortunately, there is no framework  that would work for general web  applications especially those that are implemented in Django. Invariant checking is useful for a wide range of applications, and thus we built a generic concolic execution interface for any Django-based web application.
+        <br>
+        <br>
+        Joint work with Luke Anderson, Jon Gjengset and Andrew Wang.
+        <br>
+        <br>
+        <b>Learning with Wasserstein Loss in Caffe</b> <!--(<a href="assets/papers/6.867.pdf">Writeup</a>) -->
+        <br>
+        <br>
+        This is a 6.867 (Machine Learning) final project.
+        <br>
+        Implemented a regularized Wasserstein loss layer in Caffe. Used it to perform supervised learning on MNIST
+        datasets and image segmentation tasks.
+        <br>
+        <br>
+        <b>Design and Implementation of a Highly Concurrent Parallel Firewall</b> <!--(<a href="assets/papers/6.836.pdf">Writeup</a>)-->
+        <br>
+        <br>
+        This is a 6.836 (Multicore Programming) final project.
+        <br>
+        The aim is to build a highly concurrent parallel firewall using primitives like concurrent hash tables and skip lists.
+        
+      </div>
+    </div>
+
+    <div id='awards'>
+        <div class='heading'>Awards</div>
+        <div class='content'>
+            <ul>
+                <li> First place in PLDI'15 student research competition in Undergrad category</li>
+                <li> Acitifio Undergrad Research and Innovation Scholar 2014-15</li>
+                <li> Charat Ram Sera Scholarship 2012-16</li>
+                <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in India</li>
+                <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Estonia</li>
+                <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Poland</li>
+                <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in China </li>
+                    
+            </ul>
+        </div>
+    </div>
+  </div>
+  </body>
+
+</html>
