@@ -36,10 +36,7 @@
     <div id='about'>
       <div class='content'>
         <!-- <img class='circular' src='assets/headshots/jeevana2.JPG' align="right"> -->
-        I am currently a Bachelors of Science (SB) student in Electrical Engineering and Computer Science (Course 6-2) at <a href="http://web.mit.edu/">MIT</a>. I am expecting to graduate along with Masters of Engineering (MEng) in June 2016.
-        <br>
-        <br>
-        I am in the process of applying to PhD programs this Fall. My current research interests are broadly in Programming Languages -- in particular, Program Synthesis and Program Analysis.
+        I am currently a Bachelors of Science (SB) student in Electrical Engineering and Computer Science (Course 6-2) at <a href="http://web.mit.edu/">MIT</a>. I am expecting to graduate along with Masters of Engineering (MEng) in June 2016.  My research interests are broadly in the area of Programming Languages -- in particular, Program Synthesis and Program Analysis.
         <br>
         <br>
         You can find my resume <a href="assets/resume.pdf">here</a>.
@@ -51,8 +48,9 @@
     <div class='heading'>Publications</div>
     <div class='content'>
         <ul>
-            <li><b>Type Assisted Synthesis of Recursive Transformers on Algebraic Data Types</b>, <u>Jeevana Priya Inala</u>, Xiaokang Qiu, Ben Lerner, and Armando Solar-Lezama. <i>In Submission (Nov 2015).</i> [<a href="http://arxiv.org/abs/1507.05527" target="blank">arXiv</a>]</li>
-            <li><b>Type-Aware Transactions for Faster Concurrent Code</b>, Nathaniel Herman,  <u>Jeevana Priya Inala</u>, Yihe Huang, Lily Tsai, Eddie Kohler, Barbara Liskov, and Liuba Shrira . <i>To appear in EuroSys 2016.</i> <!--[<a href="assets/papers/sto.pdf">draft</a>] --></li>
+            <li><b>Synthesis of Domain Specific CNF Encoders for Bit-Vector Solvers</b>, <u>Jeevana Priya Inala</u>, Rohit Singh, and Armando Solar-Lezama. <i>To appear in SAT 2016, Bordeaux, France.</i> [<a href="assets/papers/optCNF.pdf" target="blank">pdf</a>]</li>
+            <li><b>Type-Aware Transactions for Faster Concurrent Code</b>, Nathaniel Herman,  <u>Jeevana Priya Inala</u>, Yihe Huang, Lillian Tsai, Eddie Kohler, Barbara Liskov, and Liuba Shrira. <i>EuroSys 2016, London, UK.</i> [<a href="assets/papers/sto.pdf">pdf</a>]</li>
+            <li><b>Synthesis of Recursive ADT Transformers from Reusable Sketches</b>, <u>Jeevana Priya Inala</u>, Xiaokang Qiu, Ben Lerner, and Armando Solar-Lezama. <i>In Submission.</i> [<a href="http://arxiv.org/abs/1507.05527" target="blank">arXiv</a>]</li>
         </ul>
     </div>
 </div>
@@ -72,10 +70,10 @@
         STO is a software transactional memory (STM) based not on low-level reads and writes on memory, but on datatypes-arrays, lists, queues, hash tables, and so forth-that explicitly support transactional op- erations. In a conventional, untyped STM, transaction bookkeeping uses read and write sets of memory words, and even simple requests can generate many more transactional memory accesses than the minimum necessary to ensure correctness. Our insight is that concurrent data structures can generate fewer superfluous accesses, and use more efficient concurrency protocols, when transaction bookkeeping tracks high-level operations like "insert node into tree".
         <br>
         <br>
-        <b>Synthesis of optimal and efficient constraints for SAT solving</b>
+        <b>OptCNF</b>
         <br>
         <br>
-        In this project, we are using Sketch (a program synthesis tool) to automatically figure out optimal CNF clauses from high level DAGs represented as functions. For this, we formalized this synthesis problem and developed optimal specifications for these kinds of problems. We have used it to synthesize constraints for several boolean functions. We are now working on using this formulation for more complex functions involving bit vectors and integrating these optimal encodings directly into Sketch.
+        The theory of bit-vectors in SMT solvers is very important for many applications due to its ability to faithfully model the behavior of machine instructions. A crucial step in solving bit-vector formulas is the translation from high-level bit-vector terms down to low-level boolean formulas that can be efficiently mapped to CNF clauses and fed into a SAT solver. In this project, we demonstrate how a combination of program synthesis and machine learning technology can be used to automatically generate code to perform this translation in a way that is tailored to particular problem domains. Using this technique, we can improve upon the basic encoding strategy used by CVC4 (a state of the art SMT solver) and automatically generate variants of the solver tailored to different families of problems represented in the bit-vector benchmark suite from the SMT-COMP 2015 competition.
         <br>
         <br>
         <b>Concolic Execution for Django Applications</b> (<a href="assets/papers/6.858.pdf">Writeup</a>) (<a href="https://github.com/jonhoo/django-zoobar">Code1</a>) (<a href="https://github.com/jonhoo/django-coex">Code2</a>)
@@ -111,17 +109,31 @@
       </div>
     </div>
 
+<!--<div id='experience'>
+  <div class='heading'>Experience</div>
+  <div class='content'>
+    <ul>
+      <li> Research Intern, Microsoft Research (Summer 2016) </li>
+      <li> Research Assistant, CSAIL, MIT (Spring 2016)</li>
+      <li> Undergrad Researcher, CSAIL, MIT (Spring 2013 - Fall 2015)</li>
+      <li> Software Engineering Intern, Google Inc. (Summer 2014) </li>
+    </ul>
+  </div>
+</div> -->
+
+
+
     <div id='awards'>
         <div class='heading'>Awards</div>
         <div class='content'>
             <ul>
-                <li> First place in PLDI'15 student research competition in Undergrad category</li>
-                <li> Acitifio Undergrad Research and Innovation Scholar 2014-15</li>
-                <li> Charat Ram Sera Scholarship 2012-16</li>
-                <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in India</li>
-                <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Estonia</li>
-                <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Poland</li>
-                <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in China </li>
+                <li> First place in PLDI'15 student research competition in Undergrad category.</li>
+                <li> Acitifio Undergrad Research and Innovation Scholar 2014-15.</li>
+                <li> Charat Ram Sera Scholarship 2012-16.</li>
+                <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in New Delhi, India.</li>
+                <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Tallinn, Estonia.</li>
+                <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Krakow, Poland.</li>
+                <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in Hangzhou, China.</li>
                     
             </ul>
         </div>
