@@ -17,7 +17,7 @@
   <div id="container">
     <div id="nav" >
       <div class='name'>Jeevana Priya Inala</div>
-      <div class='email'>Email: jinala@mit.edu</div>
+      <div class='email'>Email: jinala@csail.mit.edu</div>
       <!-- <a href='#about'>About me</a>
       <a href="assets/resume.pdf">Resume</a>
       <a href='#projects'>Projects</a>
@@ -29,24 +29,28 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
 
     <div id='about'>
       <div class='content'>
-        <!-- <img class='circular' src='assets/headshots/jeevana2.JPG' align="right"> -->
-        I am currently a Bachelors of Science (SB) student in Electrical Engineering and Computer Science (Course 6-2) at <a href="http://web.mit.edu/">MIT</a>. I am expecting to graduate along with Masters of Engineering (MEng) in June 2016.  My research interests are broadly in the area of Programming Languages -- in particular, Program Synthesis and Program Analysis.
+        <img class='circular' src='assets/headshots/Jeevana3.jpg' align="right">
+        I am a PhD student in Computer Science at <a href="http://web.mit.edu/">MIT</a> advised by Prof. Armando Solar-Lezama. My research interests are broadly in the area of Programming Languages -- in particular, Program Synthesis.
         <br>
         <br>
         You can find my resume <a href="assets/resume.pdf">here</a>.
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
 <div id='publications'>
     <div class='heading'>Publications</div>
     <div class='content'>
         <ul>
+            <li><b>Synthesis of Domain Specific CNF Encoders for Bit-Vector Solvers</b>, <u>Jeevana Priya Inala</u>, <i> MEng Thesis, MIT 2016 </i> [<a href="assets/papers/mengthesis.pdf" target="blank">pdf</a>]</li>
+
             <li><b>Synthesis of Domain Specific CNF Encoders for Bit-Vector Solvers</b>, <u>Jeevana Priya Inala</u>, Rohit Singh, and Armando Solar-Lezama. <i>SAT 2016, Bordeaux, France.</i> [<a href="assets/papers/sat2016tr.pdf" target="blank">pdf</a>]</li>
             <li><b>Type-Aware Transactions for Faster Concurrent Code</b>, Nathaniel Herman,  <u>Jeevana Priya Inala</u>, Yihe Huang, Lillian Tsai, Eddie Kohler, Barbara Liskov, and Liuba Shrira. <i>EuroSys 2016, London, UK.</i> <!--[<a href="assets/papers/sto.pdf">pdf</a>] --> </li>
             <li><b>Synthesis of Recursive ADT Transformers from Reusable Sketches</b>, <u>Jeevana Priya Inala</u>, Xiaokang Qiu, Ben Lerner, and Armando Solar-Lezama. <i>In Submission.</i> [<a href="http://arxiv.org/abs/1507.05527" target="blank">arXiv</a>]</li>
@@ -54,10 +58,30 @@
     </div>
 </div>
 
+<div id='awards'>
+  <div class='heading'>Awards</div>
+  <div class='content'>
+    <ul>
+      <li> Microsoft Research Women's Fellowship, 2016-17.</li>
+      <li> Charles and Jennifer Johnson MEng Thesis First Place Award, 2016.</li>
+      <li> First place in ACM SRC Grand Finale in Undergrad category, 2016.</li>
+      <li> First place in PLDI student research competition in Undergrad category, 2015.</li>
+      <li> Acitifio Undergrad Research and Innovation Scholar, 2014-15.</li>
+      <li> Charat Ram Sera Scholarship, 2012-16.</li>
+      <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in New Delhi, India.</li>
+      <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Tallinn, Estonia.</li>
+      <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Krakow, Poland.</li>
+      <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in Hangzhou, China.</li>
+      
+    </ul>
+  </div>
+</div>
+
+
     <div id='projects'>
       <div class='heading'>Projects</div>
       <div class='content'>
-        <b>SyntRec</b>  - Won first prize in PLDI SRC 2015 in Undergrad category (<a href="assets/papers/pldi_src_poster.pdf">Poster</a>) (<a href="assets/papers/pldi_slides.pdf">Slides</a>)
+        <b>SyntRec</b>  - Won first prize in PLDI SRC 2015 and ACM SRC grand finale 2016 in Undergrad category (<a href="assets/papers/pldi_src_poster.pdf">Poster</a>) (<a href="assets/papers/pldi_slides.pdf">Slides</a>)
         <br>
         <br>
         We implemented a system called SyntRec that helps implement interesting functions involving pattern matching and algebraic data types. One of the novel aspects of this work is the combination of type inference and counterexample-guided inductive synthesis (CEGIS) in order to support very high-level notations for describing a space of possible implementations. We also come up with a new encoding for synthesis problems involving immutable data-structures that significantly improves the scalability. The approach is evaluated on a set of case studies which most notably include synthesizing desugaring functions for lambda calculus that force the synthesizer to discover Church encodings for pairs and boolean operations, as well as a procedure to generate constraints for type inference.
@@ -69,7 +93,7 @@
         STO is a software transactional memory (STM) based not on low-level reads and writes on memory, but on datatypes-arrays, lists, queues, hash tables, and so forth-that explicitly support transactional op- erations. In a conventional, untyped STM, transaction bookkeeping uses read and write sets of memory words, and even simple requests can generate many more transactional memory accesses than the minimum necessary to ensure correctness. Our insight is that concurrent data structures can generate fewer superfluous accesses, and use more efficient concurrency protocols, when transaction bookkeeping tracks high-level operations like "insert node into tree".
         <br>
         <br>
-        <b>OptCNF</b>
+        <b>OptCNF</b> - Won Charles and Jennifer Johnson MEng Thesis First Place Award (<a href="assets/papers/optcnf_slides.pdf">Slides</a>)
         <br>
         <br>
         The theory of bit-vectors in SMT solvers is very important for many applications due to its ability to faithfully model the behavior of machine instructions. A crucial step in solving bit-vector formulas is the translation from high-level bit-vector terms down to low-level boolean formulas that can be efficiently mapped to CNF clauses and fed into a SAT solver. In this project, we demonstrate how a combination of program synthesis and machine learning technology can be used to automatically generate code to perform this translation in a way that is tailored to particular problem domains. Using this technique, we can improve upon the basic encoding strategy used by CVC4 (a state of the art SMT solver) and automatically generate variants of the solver tailored to different families of problems represented in the bit-vector benchmark suite from the SMT-COMP 2015 competition.
@@ -96,17 +120,19 @@
         <br>
         <br>
         Joint work with Prafulla Dhariwal.
+        <!--<br>
         <br>
-        <br>
-        <b>Design and Implementation of a Highly Concurrent Parallel Firewall</b> <!--(<a href="assets/papers/6.836.pdf">Writeup</a>)-->
+        <b>Design and Implementation of a Highly Concurrent Parallel Firewall</b> <!--(<a href="assets/papers/6.836.pdf">Writeup</a>)-
         <br>
         <br>
         This is a 6.836 (Multicore Programming) final project.
         <br>
         The aim is to build a highly concurrent parallel firewall using primitives like concurrent hash tables and skip lists.
-        
+        -->
       </div>
     </div>
+  </div>
+
 
 <!--<div id='experience'>
   <div class='heading'>Experience</div>
@@ -122,22 +148,6 @@
 
 
 
-    <div id='awards'>
-        <div class='heading'>Awards</div>
-        <div class='content'>
-            <ul>
-                <li> First place in PLDI'15 student research competition in Undergrad category.</li>
-                <li> Acitifio Undergrad Research and Innovation Scholar 2014-15.</li>
-                <li> Charat Ram Sera Scholarship 2012-16.</li>
-                <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in New Delhi, India.</li>
-                <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Tallinn, Estonia.</li>
-                <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Krakow, Poland.</li>
-                <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in Hangzhou, China.</li>
-                    
-            </ul>
-        </div>
-    </div>
-  </div>
-  </body>
+     </body>
 
 </html>
