@@ -68,7 +68,8 @@ function moveTo(name, x, y, times){
 		y = x.randy();
 		x = x.randx();	
 	}
-	enqueue("moveToInner(\""+name+"\" ," + x + ", " + y + "," + (times) + ")" );
+	moveToInner(name, x, y, times);
+	//enqueue("moveToInner(\""+name+"\" ," + x + ", " + y + "," + (times) + ")" );
 }
 
 function moveToInner(name, x, y, times){
@@ -106,7 +107,8 @@ function turn(name, direction, times){
 	}
 	var namestr = nameToStr(name);
 	for(var i=0; i<times; ++i){
-		enqueue( "turnInner("+namestr+" , { x:"+direction.x+" , y:"+direction.y+" })" );
+		turnInner(namestr, {x:direction.x, y:direction.y});
+		//enqueue( "turnInner("+namestr+" , { x:"+direction.x+" , y:"+direction.y+" })" );
 	}		
 }
 
@@ -146,7 +148,8 @@ function move(name, direction, times){
 	
 	var namestr = nameToStr(name);
 	for(var i=0; i<times; ++i){
-		enqueue( "moveInner("+namestr+" , { x:"+direction.x+" , y:"+direction.y+" })" );
+		moveInner(namestr, {x:direction.x, y:direction.y});
+		//enqueue( "moveInner("+namestr+" , { x:"+direction.x+" , y:"+direction.y+" })" );
 	}
 }
 
