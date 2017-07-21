@@ -47,24 +47,6 @@ struct box{
 	float w;
 }
 
-float pi = 3.14;
-float pit = 0.4;
-float sine(float a) {
-	return 2.0/(pi - 2.0*pit)*a;
-}
-
-float cosine(float a) {
-	if (a > pit && a < pi - pit) {
-		return -2.0/(pi - 2.0*pit)*(a-pi/2.0);
-	}
-	if (a>= -pit && a <= pit) {
-		return 1.0;
-	}
-	if (a < -pit && a > -pi + pit) {
-		return 2.0/(pi - 2.0*pit)*(a+pi/2.0);
-	}
-}
-
 void simulate(car c, float dt){
 	float YL = c.b.yf - c.b.yb;
 	float XL = c.b.xf - c.b.xb;
@@ -230,22 +212,23 @@ void checkAngle(float ang) {
 	assert(K*ang >= -K*1.0); 
 }
 
-void checkSwitch(float x) {
-	assert(x*K > -K*4.0);
-	assert(x*K < K*7.0);
+generator bit genExp(car c) {
+	if (??) return c.b.xb < ??;
+	else if (??) return c.b.xb > ??;
+	else if (??) return c.b.yb < ??;
+	else return c.b.yb > ??;
 }
+
 
 void controller(car c) {
 	float v = ??;
-	float x1 = ??; float x2 = ??; float x3 = ??;
-	checkSwitch(x1); checkSwitch(x2); checkSwitch(x3);
-	if (c.b.xb > x1) {
+	if (genExp(c)) {
 		c.v = v;
 		c.ang = 0.0;
-	} else if (c.b.xb > x2) {
+	} else if (genExp(c)) {
 		c.v = v;
 		c.ang = ??/20.0;
-	} else if (c.b.xb > x3) { 
+	} else if (genExp(c)) {
 		c.v = v;
 		c.ang = ??/20.0;
 	} else {
@@ -589,17 +572,22 @@ void checkSwitch(float x) {
 	assert(x*K < K*7.0);
 }
 
+generator bit genExp(car c) {
+	if (??) return c.b.xb < ??;
+	else if (??) return c.b.xb > ??;
+	else if (??) return c.b.yb < ??;
+	else return c.b.yb > ??;
+}
+
 void controller(car c) {
 	float v = 2.0;
-	float x1 = ??; float x2 = ??; float x3 = ??;
-	checkSwitch(x1); checkSwitch(x2); checkSwitch(x3);
-	if (c.b.xb > x1) {
+	if (genExp(c)) {
 		c.v = v;
 		c.ang = 0.0;
-	} else if (c.b.xb > x2) {
+	} else if (genExp()) {
 		c.v = v;
 		c.ang = ??/20.0;
-	} else if (c.b.xb > x3) { 
+	} else if (genExp()) {
 		c.v = v;
 		c.ang = ??/20.0;
 	} else {
