@@ -23,11 +23,17 @@ We have created several demo videos that illustrate the working of the tool. The
 You can play with WebRelate live at the following URL:<br>
 <a href="http://webrelate.azurewebsites.net/">http://webrelate.azurewebsites.net</a> <br><br>
 
-We also provide some sample <a href="benchmarks.zip">spreadsheets</a> to begin with. Note that this IDE is still at a beta stage and hence, it might be very brittle. 
+We also provide some sample <a href="benchmarks.zip">spreadsheets</a> to begin with. Note that this IDE is still at a beta stage and hence, it might be very brittle. For example, some of the webpages are very dynamic and hence, they might break our algorithms. For the experiments, we actually downloaded all the html files (hence they are static) and our algorithms work robustly on them. In future, we will try to overcome these issues. <br> <br>
 
+To start with the Web IDE, you can import one of these sample spreadsheets by clicking on the Choose File button in the interface. Once the spreadsheet is loaded, the next task is to provide example URLs. You can do this in two ways: first, you can directly provide the URL as shown in demos 1 and 2. Second, you can enter a search query term and use a search engine (in this case bing search) to get a list of URLs and select one from them (demo 3). As mentioned in the paper (section 2 example 2.2), this second method is useful when URLs contain strings that cannot be derived from just the spreadsheet. Before you select the URL from the search results, make sure you click on an empty cell in the example row. This is the cell where the URL will be copied into. <br> <br>
+
+The next step is to provide extraction examples. You can click on the cell that has the URL and then click on the load url button on the top. This will load the corresponding webpage in the right pane. (Note if your screen is too small, these two windows might overlap.) Now, click a new cell in the example row and highlight the desired data from the web page. Our system detects the HTML node that contains the highlighted region and sends it to the backend. Because of this, even if you select a part of the region in a HTML node, the entire node text will be copied. <br> <br>
+
+Once the examples are provided, we can now start the learning. You can either click on the last extracted cell and click the fill all button or you can click on each item and fill them separately. This needs to be done in the following order: first, select the cell containing the search query (if any) and click on fill query button. Second, select the cell containing the URL and click on fill url button. Finally, select the data cell and click on fill data button. The time taken to complete this task can be significantly larger (couple of seconds depending on the internet spped) than the what is mentioned in the paper. This is because the paper only computes the time spent in doing the actual search where as in the demo most of the time is actually spent in getting the web pages. There is also the initial server setup time. <br> <br>
+
+You can also check that the extracted data is actually correct by clicking on the other URLs and using the load url button.  If at any time, you happened to do the wrong sequence of steps, the system can freeze. In those situations, it is better to reload the page and start again.
 
 <h3> WebRelate benchmarks </h3>
-Do not distribute
 
 <h4>Prerequistes </h4>
 <ol>
