@@ -1,18 +1,29 @@
 <html>
 <head>
-<title>Webrelate Artifact Evaluation</title>
+<title>Webrelate</title>
 </head>
 <body>
 <h1> POPL 2018 Artifact Evaluation </h1>
 
+<b>Disclaimer: WebRelate is proprietary Microsoft software. Please do not distribute any part of this artifact to anyone outside the artifact committee.</b>
+
 <h3> Webrelate paper </h3>
+Here are the links to the original submission as well as our author response for some of the questions raised by the reviewers. <br>
 <a href="paper.pdf">Original submission</a><br>
 <a href="rebuttal.pdf">Author response</a><br>
 
+<h3> Summary of WebRelate </h3>
+WebRelate is a programming-by-example tool that combines data from the web with the structured data from spreadsheets. The tool takes as input a spreadsheet, some examples for the URLs that contain the desired web data, and examples of locations of the data within the webpages. Using these inputs, the tool produces a program that does the same transformation to the other rows in the spreadsheet. This program is itself a union of two different programs -- the first program learns a string transformation that can produce the URL strings for the remaining rows and the second program learns an extraction program that computes Xpaths (which identify nodes in HTML documents) that correspond to the desired data from these URLs. 
 
-<h3> Demo videos </h3>
-Demo vidoes of Webreate can be found <a href="https://drive.google.com/open?id=
-0ByGcuXqa9Z3KVEhERjBmSXJRc0U">here</a>.
+<h3> Demo videos</h3>
+We have created several demo videos that illustrate the working of the tool. These videos can be found <a href="https://drive.google.com/open?id=
+0ByGcuXqa9Z3KVEhERjBmSXJRc0U">here</a>. We apologise for the lack of audio in these videos. The following sections should be able to clarify anything that is not clear in the videos.
+
+<h3>Web IDE </h3>
+You can play with WebRelate live at the following URL:<br>
+<a href="http://webrelate.azurewebsites.net/">http://webrelate.azurewebsites.net</a> <br><br>
+
+We also provide some sample <a href="benchmarks.zip">spreadsheets</a> to begin with. Note that this IDE is still at a beta stage and hence, it might be very brittle. 
 
 
 <h3> WebRelate benchmarks </h3>
