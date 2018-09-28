@@ -37,7 +37,7 @@ body {
 
 
 .heading {
-  font-size: 28px;
+  font-size: 20px;
   color: #CC6600;
   font-weight: bold;
   margin-right: 3%;
@@ -46,11 +46,10 @@ body {
 }
 
 .content{
-  margin-top: 20px;
+  margin-top: 2px;
   font-size: 16px;
   margin-right: 3%;
   margin-left: 3%;
-  padding-bottom: 10px;
   color: black;
   text-align: justify;
   font-weight: 100;
@@ -107,7 +106,7 @@ body {
   z-index: 10;
   margin-left: 3%;
   margin-right: 3%;
-  background: black;
+  padding-bottom: 15px;
 }
 
 #nav a {
@@ -136,5 +135,5 @@ textarea {
 
 
 
-ul li { padding: 5px 0px; }
+ul li { padding: 2px 2px; }
 
