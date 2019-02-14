@@ -32,7 +32,7 @@
 
     <div id='about'>
       <div class='content'>
-        <img class='circular' src='assets/headshots/Jeevana3.jpg' align="right">
+        <img class='circular' src='assets/headshots/Jeevana2.jpg' align="right">
         I am a third year PhD student in Computer Science at <a href="http://web.mit.edu/">MIT</a> advised by <a href="https://people.csail.mit.edu/asolar/">Prof. Armando Solar-Lezama</a>. My research interests are in Program Synthesis and Formal Methods and its applications to Robotics and Machine Learning.
         <br>
         <br>
@@ -45,6 +45,10 @@
     <div class='heading'>Publications</div>
     <div class='content'>
         <ul>
+            <li><b>Task-based Design of Modular Ad-hoc Manipulators.</b> <br>
+             Thais Campos*, <u>Jeevana Priya Inala</u>*, Armando Solar-Lezama, and Hadas Krez-Gazit<br>
+             <i>To appear at ICRA 2019</i> <br>
+               </li>
             <li><b>InverseCSG: Automatic Conversion of 3D Models to CSG Trees.</b> <br>
              Tao Du, <u>Jeevana Priya Inala</u>, Yewen Pu, Andrew Spielberg, Adriana Schulz, Daniela Rus, Armando Solar-Lezama, and Wojciech Matusik <br>
              <i>ACM SIGGRAPH ASIA 2018</i> <br>
@@ -67,6 +71,7 @@
               [<a href="http://read.seas.harvard.edu/~kohler/pubs/herman16type-aware.pdf">paper</a>] </li>
             
         </ul>
+        (* Equal Contribution)
     </div>
     <div class='heading'>Theses</div>
     <div class='content'>
@@ -85,11 +90,11 @@
     <ul>
       <li> Microsoft Research Women's Fellowship, 2016-17. </li>
       <li> Charles and Jennifer Johnson MEng Thesis First Place Award, 2016. </li>
-      <li> First place in ACM SRC Grand Finale in Undergrad category, 2016. d </li>
+      <li> First place in ACM SRC Grand Finale in Undergrad category, 2016. </li>
       <li> First place in PLDI student research competition in Undergrad category, 2015.</li>
       <li> Acitifio Undergrad Research and Innovation Scholar, 2014-15.</li>
       <li> Gold Medal at 13th Asian Physics Olympiad, 2012 held in New Delhi, India.</li>
-      <li> Silver Medal and Asian Girl topper in 43rd International Physics Olympiad, 2012 held in Tallinn, Estonia.</li>
+      <li> Silver Medal in 43rd International Physics Olympiad, 2012 held in Tallinn, Estonia.</li>
       <li> Gold Medal and Best in Theory in 5th International Olympiad in Astronomy and Astrophysics, 2011 held in Krakow, Poland.</li>
       <li> Silver Medal in 14th International Olympiad in Astronomy, 2009 held in Hangzhou, China.</li>
       
@@ -102,81 +107,6 @@
 
 </div>
 
-
-<!--    <div id='projects'>
-      <div class='heading'>Projects</div>
-      <div class='content'>
-				<b>Numerical Synthesis</b>
-				<br>
-				<br>
-				We are developing a tool to reason about both discrete and continuous components of hybrid systems more efficiently than existing approaches. Given some boolean and real unknown parameters and a specification (logic constraints), the goal of the tool is to find a setting to these unknown parameters that satisfies the specification. We have applied the technique to two different applications in autonomous driving -- 1. To synthesize control programs that provably satisfy safety properties and 2. To learn traffic models for driving behaviors from real driving data sets so that formal analysis can take realistic traffic into account.
-				<br>
-				<br>
-				
-        <b>SyntRec</b>  - Won first prize in PLDI SRC 2015 and ACM SRC grand finale 2016 in Undergrad category (<a href="assets/papers/pldi_src_poster.pdf">Poster</a>) (<a href="assets/papers/pldi_slides.pdf">Slides</a>)
-        <br>
-        <br>
-        We implemented a system called SyntRec that helps implement interesting functions involving pattern matching and algebraic data types. One of the novel aspects of this work is the combination of type inference and counterexample-guided inductive synthesis (CEGIS) in order to support very high-level notations for describing a space of possible implementations. We also come up with a new encoding for synthesis problems involving immutable data-structures that significantly improves the scalability. The approach is evaluated on a set of case studies which most notably include synthesizing desugaring functions for lambda calculus that force the synthesizer to discover Church encodings for pairs and boolean operations, as well as a procedure to generate constraints for type inference.
-        <br>
-        <br>
-        <b>STO</b>
-        <br>
-        <br>
-        STO is a software transactional memory (STM) based not on low-level reads and writes on memory, but on datatypes-arrays, lists, queues, hash tables, and so forth-that explicitly support transactional op- erations. In a conventional, untyped STM, transaction bookkeeping uses read and write sets of memory words, and even simple requests can generate many more transactional memory accesses than the minimum necessary to ensure correctness. Our insight is that concurrent data structures can generate fewer superfluous accesses, and use more efficient concurrency protocols, when transaction bookkeeping tracks high-level operations like "insert node into tree".
-        <br>
-        <br>
-        <b>OptCNF</b> - Won Charles and Jennifer Johnson MEng Thesis First Place Award (<a href="assets/papers/optcnf_slides.pdf">Slides</a>)
-        <br>
-        <br>
-        The theory of bit-vectors in SMT solvers is very important for many applications due to its ability to faithfully model the behavior of machine instructions. A crucial step in solving bit-vector formulas is the translation from high-level bit-vector terms down to low-level boolean formulas that can be efficiently mapped to CNF clauses and fed into a SAT solver. In this project, we demonstrate how a combination of program synthesis and machine learning technology can be used to automatically generate code to perform this translation in a way that is tailored to particular problem domains. Using this technique, we can improve upon the basic encoding strategy used by CVC4 (a state of the art SMT solver) and automatically generate variants of the solver tailored to different families of problems represented in the bit-vector benchmark suite from the SMT-COMP 2015 competition.
-        <br>
-        <br>
-        <b>Concolic Execution for Django Applications</b> (<a href="assets/papers/6.858.pdf">Writeup</a>) (<a href="https://github.com/jonhoo/django-zoobar">Code1</a>) (<a href="https://github.com/jonhoo/django-coex">Code2</a>)
-        <br>
-        <br>
-        This is a 6.858 (Computer systems security) final project.
-        <br>
-        Concolic execution systems allow developers to verify that invariants in their applications are not violated no matter what input is given by a user. The idea is to use Z3 solver to find inputs that would trigger inconsistencies in web application. Unfortunately, there is no framework  that would work for general web  applications especially those that are implemented in Django. Invariant checking is useful for a wide range of applications, and thus we built a generic concolic execution interface for any Django-based web application.
-        <br>
-        <br>
-        Joint work with Luke Anderson, Jon Gjengset and Andrew Wang.
-        <br>
-        <br>
-        <b>Learning with Wasserstein Loss in Caffe</b> (<a href="assets/papers/6867Project.pdf">Writeup</a>)
-        <br>
-        <br>
-        This is a 6.867 (Machine Learning) final project.
-        <br>
-        Implemented a regularized Wasserstein loss layer in Caffe. Used it to perform supervised learning on MNIST
-        datasets and image segmentation tasks.
-        <br>
-        <br>
-        Joint work with Prafulla Dhariwal.
-        <!--<br>
-        <br>
-        <b>Design and Implementation of a Highly Concurrent Parallel Firewall</b> <!--(<a href="assets/papers/6.836.pdf">Writeup</a>)-
-        <br>
-        <br>
-        This is a 6.836 (Multicore Programming) final project.
-        <br>
-        The aim is to build a highly concurrent parallel firewall using primitives like concurrent hash tables and skip lists.
-        --
-      </div>
-    </div>
-  </div>
--->
-
-<!--<div id='experience'>
-  <div class='heading'>Experience</div>
-  <div class='content'>
-    <ul>
-      <li> Research Intern, Microsoft Research (Summer 2016) </li>
-      <li> Research Assistant, CSAIL, MIT (Spring 2016)</li>
-      <li> Undergrad Researcher, CSAIL, MIT (Spring 2013 - Fall 2015)</li>
-      <li> Software Engineering Intern, Google Inc. (Summer 2014) </li>
-    </ul>
-  </div>
-</div> -->
 
 
 
